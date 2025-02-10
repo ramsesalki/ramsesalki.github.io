@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	  <title>UPSLP - Programaci&oacute;n Web I</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="estilo/bootstrap.css">
+	  <link rel="stylesheet" href="estilo/sitio.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<script src="script/funciones.js"></script>
+		<!-- Inicia Barra de navegación -->
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<!-- Inicia el menú colapsable -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">UPSLP</a>
+			</div>
+			<!-- Finaliza el menú colapsable -->
+			<!-- Inician las opciones de menú -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav">
+				<!-- 1er elemento del menú -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Universidad<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#" id="pag_1" onclick="muestraArchivo('html/temporal.html');return false;">Presentaci&oacute;n e Historia</a></li>
+						<li class="divider"></li>
+						<li><a href="#" id="pag_2" onclick="muestraArchivo('html/temporal.html');return false;">Misi&oacute;n y Visi&oacute;n</a></li>
+						<li><a href="#" id="pag_3" onclick="muestraArchivo('html/temporal.html');return false;">Modelo acad&eacute;mico</a></li>
+						<li class="divider"></li>
+						<li><a href="#" id="pag_4" onclick="muestraArchivo('html/temporal.html');return false;">Directorio</a></li>
+						<li class="divider"></li>
+						<li><a href="#" id="pag_5" onclick="muestraArchivo('html/temporal.html');return false;">Instalaciones</a></li>
+					</ul>
+				</li>
+				<!-- 2do elemento del menú -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Oferta<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#" id="pag_6" onclick="muestraArchivo('html/temporal.html');return false;">Ingenier&iacute;a en Sistemas y Tecnolog&iacute;as Industriales</a></li>
+						<li><a href="#" id="pag_7" onclick="muestraArchivo('html/temporal.html');return false;">Ingenier&iacute;a en Tecnolog&iacute;as de la Informaci&oacute;n</a></li>
+						<li><a href="#" id="pag_8" onclick="muestraArchivo('html/temporal.html');return false;">Ingenier&iacute;a en Telem&aacute;tica</a></li>
+						<li><a href="#" id="pag_9" onclick="muestraArchivo('html/temporal.html');return false;">Ingenier&iacute;a en Tecnolog&iacute;as de Manufactura</a></li>
+						<li class="divider"></li>
+						<li><a href="#" id="pag_10" onclick="muestraArchivo('html/temporal.html');return false;">Licenciatura en Administraci&oacute;n y Gesti&oacute;n</a></li>
+						<li><a href="#" id="pag_11" onclick="muestraArchivo('html/temporal.html');return false;">Licenciatura en Mercadotecnia Internacional</a></li>
+					</ul>
+				</li>
+				<!-- 3er elemento del menú -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Actividades<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#" id="pag_12" onclick="muestraArchivo('html/temporal.html');return false;">Deportivas</a></li>
+						<li><a href="#" id="pag_13" onclick="muestraArchivo('html/temporal.html');return false;">Culturales</a></li>
+					</ul>
+				</li>
+				<!-- 4to elemento del menú -->
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Vinculaci&oacute;n<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#" id="pag_14" onclick="muestraArchivo('html/temporal.html');return false;">Egresados</a></li>
+						<li><a href="#" id="pag_15" onclick="muestraArchivo('html/temporal.html');return false;">Bolsa de trabajo</a></li>
+					</ul>
+				</li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Ene-Jun '24</a></li>
+			  </ul>
+			</div>
+			<!-- Finalizan las opciones de menú -->
+		  </div>
+		</nav>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+			  <!-- Inicia el menú colapsable -->
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myAltNavbar">
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+			  </div>
+			  <!-- Finaliza el menú colapsable -->
+			  <!-- Inician las opciones de menú -->
+			  <div class="collapse navbar-collapse" id="myAltNavbar">
+				<ul class="nav navbar-nav  navbar-right">
+				  <!-- 1er elemento del menú -->
+				  <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Comunidad<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#" id="pag_16" onclick="muestraArchivo('html/temporal.html');return false;">Aspirantes</a></li>
+						<li><a href="#" id="pag_17" onclick="muestraArchivo('html/temporal.html');return false;">Alumnos</a></li>
+						<li><a href="#" id="pag_18" onclick="muestraArchivo('html/temporal.html');return false;">Docentes</a></li>
+						<li><a href="#" id="pag_19" onclick="muestraArchivo('html/temporal.html');return false;">Administrativos</a></li>
+					</ul>
+				  </li>
+				  <!-- 2do elemento del menú -->
+				  <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ayuda<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#" id="pag_20" onclick="muestraArchivo('html/temporal.html');return false;">Contacto</a></li>
+						<li><a href="#" id="pag_21" onclick="muestraArchivo('html/temporal.html');return false;">Preguntas frecuentes</a></li>
+					</ul>
+				  </li>
+				</ul>
+			  </div>
+			  <!-- Finalizan las opciones de menú -->
+			</div>
+		  </nav>
+		<!-- Finaliza Barra de navegación -->
+		<!-- Inicia la sección de contenido -->
+		<div class="container-fluid text-center">    
+		  <div class="row content">
+			<div class="col-sm-1 sidenav">
+			</div>
+			<div class="col-sm-10 text-left" id="content" style="height: 750px"> 
+				<!-- Contenido -->
+			</div>
+			<div class="col-sm-1 sidenav">
+			</div>
+		  </div>
+		</div>
+		<!-- Finaliza la sección de contenido -->
+		<!-- Inicia Pie de página -->
+		<footer class="container-fluid text-center">
+		  <p>0177111 - Rub&eacute;n C&aacute;rdenas S&aacute;nchez</p>
+		  <p>Ingenier&iacute;a en Tecnolog&iacute;as de la Informaci&oacute;n</p>
+		</footer>
+		<!-- Finaliza Pie de página -->
+	</body>
+</html>
