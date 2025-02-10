@@ -1,0 +1,92 @@
+<!--
+    Unidad: Parcial No. 3
+    Descripcion: JavaScript con Formularios
+    Fecha: 03 de Mayo de 2024
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UPSLP - Programaci&oacute;n Web I</title>
+    </head>
+    <body onload="validaCookie()">
+        <h1>Eventos en JavaScript</h1>
+        <button onclick="holaMundo()">Saludar</button>
+        <p id="text" style="border: 2px dashed black;" 
+          onmouseover="ratonIn(this)" onmouseout="ratonOut(this)"></p>
+        <h2>Ejemplos</h2>
+        <!-- Saludar -->
+        <fieldset>
+          <legend>Saludar...</legend>
+          <label>Escribe una cadena de texto:</label>
+          <input type="text" id="txtEjemplo" placeholder="Ejemplo">
+          <input type="button" value="Saluda" onclick="saluda()">
+        </fieldset>
+        <!-- Calcular el área de figuras -->
+        <fieldset>
+          <legend>Figuras</legend>
+          <label>Selecciona la figura:</label>
+          <select id="tipoFigura">
+            <option value="0">Opci&oacute;n</option>
+            <option value="1"> Tri&aacute;ngulo</option>
+            <option value="2"> Cuadro</option>
+            <option value="3"> C&iacute;rculo</option>
+          </select>
+          <br>
+          <label>Dame el valor del dato:</label>
+          <input type="number" id="valorDato" placeholder="Valor"><br>
+          <input type="button" value="Calcular" onclick="calcula()"><br>
+          <label>Resultado:</label>
+          <input type="number" id="valorResultado" placeholder="Resultado" readonly>
+        </fieldset>
+        <!-- Inicia bloque de programación -->
+        <script>
+          function calcula() {
+            // ToDo:  Tomar el valor de mi figura y valor del dato
+            //        Aplicar la formula segun la figura (if-else/switch)
+            //        Mostrar el resultado
+            let tipoFigura = document.getElementById('tipoFigura').value;
+            console.log('Tipo figura: ' + tipoFigura);
+            let valorDato = document.getElementById('valorDato').value;
+            console.log('Valor del dato: ' + valorDato);
+            let valorResultado = 0;
+            switch(tipoFigura) {
+              case '1': // Triangulo
+                valorResultado = (valorDato * valorDato) / 2;
+                break;
+              case '2': // Cuadro
+                valorResultado = valorDato * valorDato;
+                break;
+              case '3': // Circulo
+                valorResultado = Math.PI * Math.pow(valorDato, 2);
+                break;
+            }
+            document.getElementById('valorResultado').value = valorResultado;
+          }
+          function saluda() {
+            nombre = document.getElementById('txtEjemplo').value;
+            alert('Hola a todos...\n' + nombre);
+          }
+          function holaMundo() {
+            document.getElementById("text").innerHTML += "<br>Hola mundo!!!";
+          }
+          function validaCookie() {
+            let text = "";
+            if (navigator.cookieEnabled == true)
+              text = " > Galletas activas...";
+            else
+              text = " > No hay galletas :(";
+            document.getElementById("text").innerHTML = text;
+          }
+          // Función para cambiar el estilo cuando el mouse pasa por encima del elemento
+          function ratonIn(obj) {
+            obj.style.backgroundColor = "#000000";
+            obj.style.color = "#FFFFFF";
+          }
+          // Función para cambiar el estilo cuando el mouse sale del elemento
+          function ratonOut(obj) {
+            obj.style.backgroundColor = "#FFFFFF";
+            obj.style.color = "#000000";
+          }
+        </script>
+    </body>
+</html>

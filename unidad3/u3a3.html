@@ -1,0 +1,113 @@
+<!--
+    Unidad: Parcial No. 3
+    Descripcion: JavaScript
+    Fecha: 25 de Abril de 2024
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UPSLP - Programaci&oacute;n Web I</title>
+        <style type="text/css">
+            iframe {
+                border: 3px dashed black;
+            }
+        </style>
+        <script>
+            //document.body.style.backgroundColor = 'black';
+            console.log(eval('3+5*4-2'));
+            console.log(eval('(3+5)*(4-2)'));
+            console.log(eval('3+(5*4)-2'));
+            console.log(eval('(3+5)*4-2'));
+            console.log(eval('3+5*(4-2)'));
+            //document.body.style.backgroundColor = 'grey';
+        </script>
+    </head>
+    <body>
+        <script>
+            document.body.style.backgroundColor = 'lightgrey';
+        </script>
+        <h1>Elementos externos</h1>
+        <p style="text-align: center;">
+            <iframe height="400" width="640" src="https://es.wikipedia.org/wiki/Juegos_Ol%C3%ADmpicos_de_Par%C3%ADs_2024"></iframe>
+        </p>
+        <p style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/j3zM1cYiYc0?si=PziZNCOalhB64OOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </p>
+        <h1>Lista con JavaScript</h1>
+        <ol>
+            <li id="item_1"></li>
+            <li id="item_2"></li>
+            <li id="item_3"></li>
+            <li id="item_4"></li>
+            <li id="item_5"></li>
+        </ol>
+        <script>
+            document.getElementById('item_1').textContent = 'UPSLP';
+            document.getElementById('item_2').textContent = 'UASLP';
+            document.getElementById('item_3').textContent = 'UVM';
+            document.getElementById('item_4').textContent = 'UCEM';
+            document.getElementById('item_5').textContent = 'UNID';
+        </script>
+        <ul>
+            <li id="item_6"></li>
+            <li id="item_7"></li>
+            <li id="item_8"></li>
+            <li id="item_9"></li>
+        </ul>
+        <script>
+            // Acceso a elementos como un arreglo
+            document.getElementsByTagName('li')[5].textContent = 'Pato';
+            document.getElementsByTagName('li')['item_7'].textContent = 'Rana';
+            // Acceso a elementos como una referencia
+            document.getElementsByTagName('li').item_8.textContent = 'Gato';
+            // Acceso a elementos con una función
+            document.getElementsByTagName('li').item(8).textContent = 'Perro';
+        </script>
+        <h1>Hola mundo en JavaScript</h1>
+        <p>
+            Consola: <code>console.log('Hola mundo en JavaScript');</code>
+            <script> console.log('Hola mundo en JavaScript'); </script>
+        </p>
+        <p>
+            Document: <code>document.write('Hola mundo en JavaScript');</code>
+            <script> document.write('Hola mundo en JavaScript'); </script>
+        </p>
+        <h1>Cuadros de Di&aacute;logo</h1>
+        <p>
+            Alert: <code>alert('ALERT: Hola mundo en JavaScript');</code>
+            <script> alert('ALERT: Hola mundo en JavaScript'); </script>
+            <br>
+            Confirm: <code>confirm('CONFIRM: Hola mundo en JavaScript');</code>
+            <script> confirm('CONFIRM: Hola mundo en JavaScript'); </script>
+            <br>
+            Prompt: <code>prompt('PROMPT: Hola mundo en JavaScript');</code>
+            <script> prompt('PROMPT: Hola mundo en JavaScript'); </script>
+        </p>
+        <h1>Location</h1>
+        <script>
+            if(confirm('Este sitio maneja cookies, acepta los términos y condiciones') != true) {
+                location.href = 'https://www.google.com.mx/';
+            }
+            // El usuario tiene N intentos para la contraseña
+            var intentos = 0;
+            var clave = Math.floor(Math.random() * 100);
+            var password = '';
+            var bandera = true; // Controla si se repite el ciclo
+
+            do {
+                password = prompt('Adivina el número...\nLlevas ' + intentos + ' intentos');
+                intentos = intentos + 1;
+                console.log('Clave: ' + clave + ' Valor: ' + password + ' Intentos: ' + intentos);
+                //clave = Math.floor(Math.random() * 100);
+                if (password > clave)
+                    alert('Te pasaste; el número debe ser menor!!!');
+                else if (password < clave)
+                    alert('Te falta; el número debe ser mayor!!!');
+                else {
+                    bandera = false;
+                    alert('Acceso concedido... te tardaste ' + intentos + ' intentos...');
+                }
+            } while (bandera);
+        </script>
+    </body>
+</html>

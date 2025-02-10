@@ -1,0 +1,218 @@
+<!--
+    Unidad: Parcial No. 3
+    Descripcion: Ejercicios con JavaScript
+    Fecha: 08 de Mayo de 2024
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UPSLP - Programaci&oacute;n Web I</title>
+        <style>
+            fieldset { border: 2px dashed gray; }
+            legend { font-weight: bold; background-color: white; }
+            .terminado { background-color: palegreen; }
+            .terminado input { font-weight: bold; background-color: lightgrey; }
+            .terminado p { background-color: lightcoral; font-style: italic; font-weight: bold; }
+            .terminado button { font-weight: bold; background-color: lightblue; }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript - Ejercicios</h1>
+        <fieldset class="terminado">
+            <legend>Ecuaci&oacute;n cuadr&aacute;tica</legend>
+            <label>Valor del coeficiente <code>a</code>:</label>
+            <input type="number" placeholder="(A)" id="valor_A">
+            <br>
+            <label>Valor del coeficiente <code>b</code>:</label>
+            <input type="number" placeholder="(B)" id="valor_B">
+            <br>
+            <label>Valor del coeficiente <code>c</code>:</label>
+            <input type="number" placeholder="(C)" id="valor_C">
+            <br>
+            <button onclick="eqCuadratica()">Calcular</button>
+            <br>
+            <p id="res_eqCuadratica"><code>Ecuaci&oacute;n</code></p>
+            <p id="res_eqCuadratica1"><code>Ra&iacute;z positiva</code></p>
+            <p id="res_eqCuadratica2"><code>Ra&iacute;z negativa</code></p>
+        </fieldset>
+        <fieldset class="terminado">
+            <legend>N&uacute;meros Primos</legend>
+            <label>Valor del n&uacute;mero a calcular:</label>
+            <input type="number" placeholder="(Número)" id="valor_NP">
+            <button onclick="numPrimo()">Calcular</button>
+            <br>
+            <p id="res_numPrimo"><code>Factores divisibles</code></p>
+        </fieldset>
+        <fieldset class="terminado">
+            <legend>Factorial</legend>
+            <label>Valor del n&uacute;mero a calcular:</label>
+            <input type="number" placeholder="(Número)" id="valor_NF">
+            <button onclick="numFactorial()">Calcular</button>
+            <br>
+            <p id="res_numFactorial"><code>Resultado</code></p>
+        </fieldset>
+        <fieldset class="terminado">
+            <legend>Fibonacci</legend>
+            <label>Valor del n&uacute;mero a calcular:</label>
+            <input type="number" placeholder="(Número)" id="valor_NFib">
+            <button onclick="numFibonacci()">Calcular</button>
+            <br>
+            <p id="res_numFibonacci"><code>Serie de Fibonacci</code></p>
+        </fieldset>
+        <fieldset>
+            <legend>N&uacute;mero arm&oacute;nico</legend>
+            <label>Valor del n&uacute;mero a calcular:</label>
+            <input type="number" placeholder="(Número)" id="valor_NH">
+            <button onclick="numArmonico()">Calcular</button>
+            <br>
+            <p id="res_numArmonico"><code>Resultado</code></p>
+        </fieldset>
+        <fieldset>
+            <legend>N&uacute;mero Armstrong</legend>
+            <label>Valor del n&uacute;mero a calcular:</label>
+            <input type="number" placeholder="(Número)" id="valor_NA">
+            <button onclick="numArmstrong()">Calcular</button>
+            <br>
+            <p id="res_numArmstrong"><code>Resultado</code></p>
+        </fieldset>
+        <fieldset>
+            <legend>Calculadora simple</legend>
+            <label>Valor del primer operando:</label>
+            <input type="number" placeholder="(X)" id="valor_X">
+            <br>
+            <label>Valor del segundo operando:</label>
+            <input type="number" placeholder="(Y)" id="valor_Y">
+            <br>
+            <button onclick="opSuma()">+</button>
+            <button onclick="opResta()">-</button>
+            <button onclick="opMult()">×</button>
+            <button onclick="opDiv()">÷</button>
+            <button onclick="opPot2()">²</button>
+            <button onclick="opPot3()">³</button>
+            <button onclick="opSqrt()">√</button>
+            <br>
+            <label>Valor del resultado:</label>
+            <input type="number" placeholder="(Z)" id="valor_Z">
+        </fieldset>
+        <fieldset>
+            <legend>Adivina el n&uacute;mero</legend>
+        </fieldset>
+        <fieldset class="terminado">
+            <legend>Generador de contraseñas</legend>
+            <label>Tama&ntilde;o</label><input type="number" id="longitud">
+            <br><input type="checkbox" id="mayus"><label>Incluir letras may&uacute;sculas (ABC...)</label>
+            <br><input type="checkbox" id="minus"><label>Incluir letras min&uacute;sculas (abc...)</label>
+            <br><input type="checkbox" id="digitos"><label>Incluir n&uacute;meros (123...)</label>
+            <br><input type="checkbox" id="espec"><label>Incluir Caracteres especiales  (#@$...)</label>
+            <br><button onclick="generar()">Generar</button>
+            <br><label>Contrase&ntilde;a:</label>
+            <input type="text" readonly id="passwd">
+        </fieldset>
+        <fieldset>
+            <legend>Decimal a Binario & Binario a Decimal</legend>
+        </fieldset>
+        <fieldset>
+            <legend>Cambio de base</legend>
+        </fieldset>
+        <fieldset>
+            <legend>Encriptaci&oacute;n (Base 64)</legend>
+        </fieldset>
+        <script>
+            function eqCuadratica(){
+                let valor_A = document.getElementById("valor_A").value;
+                let valor_B = document.getElementById("valor_B").value;
+                let valor_C = document.getElementById("valor_C").value;
+
+                console.log("2a: " + eval(2*valor_A));
+                console.log("4ac: " + eval(4*valor_A*valor_C));
+                console.log("b*b: " + eval(Math.pow(valor_B,2)));
+                console.log("raiz: " + eval(Math.sqrt(Math.pow(valor_B,2)-(4*valor_A*valor_C))));
+                let res_eqCuadratica1 = (-valor_B-(Math.sqrt(Math.pow(valor_B,2)-(4*valor_A*valor_C))))/2*valor_A;
+                let res_eqCuadratica2 = (-valor_B+(Math.sqrt(Math.pow(valor_B,2)-(4*valor_A*valor_C))))/2*valor_A;
+
+                document.getElementById("res_eqCuadratica").innerHTML = valor_A + "x<sup>2</sup> + " + valor_B + "x + " + valor_C + " = 0";
+                document.getElementById("res_eqCuadratica1").innerHTML = "x<sub>1</sub> = " + res_eqCuadratica1 + "<br>";
+                document.getElementById("res_eqCuadratica2").innerHTML = "x<sub>2</sub> = " + res_eqCuadratica2 + "<br>";
+            }
+            function numFactorial(){
+                let valor_NF = document.getElementById("valor_NF").value;
+                let factorial=1;
+                for(var i=1;i<=valor_NF;i++){
+                    factorial*=i;
+                }
+                document.getElementById("res_numFactorial").innerHTML = "El factorial de " + valor_NF + " es: " + factorial;
+            }
+            function numFibonacci(){
+                let valor_NFib = document.getElementById("valor_NFib").value;
+                let var_1 = 0;
+                let var_2 = 1;
+                let var_Nuevo;
+                document.getElementById("res_numFibonacci").innerHTML += var_1 + ' ';
+                document.getElementById("res_numFibonacci").innerHTML += var_2 + ' ';
+                for(var i = 1; i <= valor_NFib; i++){   
+                    var_Nuevo = var_1 + var_2;
+                    var_1 = var_2;
+                    var_2 = var_Nuevo;
+                    document.getElementById("res_numFibonacci").innerHTML += var_Nuevo + ' ';
+                }   
+            }
+            function numPrimo() {
+                let divisores = 0;
+                let valor_NP = document.getElementById("valor_NP").value;
+                let strDivisores = '';
+                console.log(valor_NP);
+                for(var i = valor_NP; i >= 1; i--) {
+                    console.log(eval(valor_NP % i));
+                    if (valor_NP % i == 0) {
+                        divisores++;
+                        strDivisores += i + ' ';
+                    }
+                }
+                if (divisores == 2)
+                    document.getElementById("res_numPrimo").innerHTML = 'Es Primo!!!';
+                else
+                    document.getElementById("res_numPrimo").innerHTML = 'Número compuesto (' + strDivisores + ')';
+            }
+            function generar(){
+                let cadLong = document.getElementById('longitud').value;
+                let carMayus = document.getElementById('mayus').checked;
+                let carMinus = document.getElementById('minus').checked;
+                let carEspc = document.getElementById('espec').checked;
+                let carNum = document.getElementById('digitos').checked;
+
+                let simbMayus = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+                let simbMinus = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+                let simbNum = ["1", "2", "3", "4", "5","6","7","8","9","0"];
+                let simbEspec = ['#','@','$'];
+
+                let opc = 0;
+                let pass = '';
+                let aux = '';
+
+                console.log('Longitud: ' + cadLong);
+                for (let i = 0; i < cadLong; ){
+                    opc = Math.floor(Math.random() * 3);
+                    console.log('Opción: ' + opc);
+                    switch(opc){
+                        case 0:
+                            if(carMayus == true) { aux = simbMayus[Math.floor(Math.random() * 26)]; i++; }
+                            break;
+                        case 1:
+                            if(carMinus == true) { aux = simbMinus[Math.floor(Math.random() * 26)]; i++; }
+                            break;
+                        case 2:
+                            if(carNum == true) { aux = simbNum[Math.floor(Math.random() * 10)]; i++; }
+                            break;
+                        case 3:
+                            if(carEspc == true) { aux = simbEspec[Math.floor(Math.random() * 3)]; i++; }
+                            break;
+                    }
+                    pass += aux;
+                    aux = '';
+                    console.log('Símbolo: ' + aux + ' índice: ' + i);
+                }
+                document.getElementById('passwd').value = pass;
+            }
+        </script>
+    </body>
+</html>
