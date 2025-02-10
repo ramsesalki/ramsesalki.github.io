@@ -1,0 +1,190 @@
+<!--
+    Unidad: Parcial No. 2
+    Descripcion: Tablas
+    Fecha: 01 de Marzo de 2024
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UPSLP - Programaci&oacute;n Web I</title>
+    </head>
+    <body>
+        <h1>Tablas</h1>
+        <h3>Estructura b&aacute;sica</h3>
+        <table border="4">
+            <tr>
+                <td>[ 1 ]</td>
+                <td>[ 2 ]</td>
+                <td>[ 3 ]</td>
+            </tr>
+            <tr>
+                <td>[ 4 ]</td>
+                <td>[ 5 ]</td>
+                <td>[ 6 ]</td>
+            </tr>
+            <tr>
+                <td>[ 7 ]</td>
+                <td>[ 8 ]</td>
+                <td>[ 9 ]</td>
+            </tr>
+        </table>
+        <h3>Tabla con encabezado</h3>
+        <table border="4">
+            <caption>Calificaciones de la Unidad No. 1<br>Grupo T10F</caption>
+            <tr><th>&nbsp;</th><th>Alumno</th><th>Calificaci&oacute;n</th></tr>
+            <tr><th>1.</th><td>Aguilar Tobías Emiliano</td><td>9.50</td></tr>
+            <tr><th>2.</th><td>Briano Montalvo Luis Enrique</td><td>8.75</td></tr>
+            <tr><th>3.</th><td>Corpus Galarza Cesar Aaron</td><td>8.50</td></tr>
+            <tr><th>4.</th><td>de la Rosa Juárez Fernando De Jesús</td><td>9.75</td></tr>
+            <tr><th>5.</th><td>Díaz Ramos Jesús Emmanuel</td><td>7.75</td></tr>
+            <tr><th>6.</th><td>Ferretiz Medina Marioni</td><td>9.50</td></tr>
+            <tr><th>7.</th><td>Guerrero Ruiz Ana Paola</td><td>9.00</td></tr>
+            <tr><th>8.</th><td>Leos Manzo Axel Alejandro</td><td>10.00</td></tr>
+            <tr><th>9.</th><td>Medina Avila Moises</td><td>9.00</td></tr>
+            <tr><th>10.</th><td>Moreno Rivera Diego</td><td>8.75</td></tr>
+            <tr><th>11.</th><td>Pérez Martínez Israel</td><td>9.15</td></tr>
+            <tr><th>12.</th><td>Reyes Acosta Katia Lizeth</td><td>8.25</td></tr>
+            <tr><th>13.</th><td>Robles Mendoza Jonathan Ramses</td><td>7.55</td></tr>
+            <tr><th>14.</th><td>Rocha Medina Luis Alfonso</td><td>7.75</td></tr>
+            <tr><th>15.</th><td>Romero Reyes Mariana Monserrat</td><td>8.95</td></tr>
+            <tr><th>16.</th><td>Torres Aguilera Isaac</td><td>9.95</td></tr>
+            <tr><th>17.</th><td>Vicencio Escalante Jaime Hazael</td><td>10.00</td></tr>
+            <tr><th>18.</th><td>Villanueva Venegas Cristian David</td><td>9.50</td></tr>
+        </table>
+        <h3>Tabla con bloques/secciones (head, body y foot)</h3>
+        <table border="3">
+            <thead>
+                <tr><th></th><th>Paraguay</th><th>Cancún</th><th>Japón</th></tr>
+            </thead>
+            <tfoot>
+                <tr><th>Total</th><th>$24,660</th><th>$37,030</th><th>$41,900</th></tr>
+            </tfoot>
+            <tbody>
+                <tr><th>Vuelo</th><td>$7,600</td><td>$2,530</td><td>$31,500</td></tr>
+                <tr><th>Hotel</th><td>$2,260</td><td>$2,900</td><td>$7,000</td></tr>
+                <tr><th>Comida</th><td>$800</td><td>$500</td><td>$500</td></tr>
+                <tr><th>Transporte</th><td>$4,000</td><td>$1,100</td><td>$900</td></tr>
+                <tr><th>Varios</th><td>$10,000</td><td>$30,000</td><td>$2,000</td></tr>
+            </tbody>
+        </table>
+        <h3>Tabla con celdas combinadas</h3>
+        <table border="3">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Nombre</th>
+                <th colspan="2">Apellido</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Juan</td>
+                <td></td>
+                <td>Pérez</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Pedro</td>
+                <td colspan="2">López</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Tómas</td>
+                <td>Martínez</td>
+                <td rowspan="2">Díaz</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Miguel</td>
+                <td>López</td>
+              </tr>
+            </tbody>
+        </table>
+        <br>
+        <table border="4">
+          <tr>
+            <th colspan="4">Tabla No. 1</th>
+          </tr>
+          <tr>
+            <td>A</td>
+            <td>B</td>
+            <td rowspan="4">C</td>
+            <td>D</td>
+          </tr>
+          <tr>
+            <td rowspan="2">E</td>
+            <td>F</td>
+            <td rowspan="3">G</td>
+          </tr>
+          <tr>
+            <td>H</td>
+          </tr>
+          <tr>
+            <td>I</td>
+            <td>J</td>
+          </tr>
+        </table>
+        <br>
+        <table border="4">
+            <tr>
+              <th>&nbsp;</th>
+              <th>I</th>
+              <th>II</th>
+              <th>III</th>
+              <th>IV</th>
+              <th>V</th>
+              <th>VI</th>
+              <th>VII</th>
+              <th>VIII</th>
+            </tr>
+            <tr>
+              <th>I</th>
+              <td colspan="3">1</td>
+              <td rowspan="3">2</td>
+              <td>3</td>
+              <td rowspan="5">4</td>
+              <td colspan="2" rowspan="2">5</td>
+            </tr>
+            <tr>
+              <th>II</th>
+              <td colspan="2">6</td>
+              <td>7</td>
+              <td rowspan="3">8</td>
+            </tr>
+            <tr>
+              <th>III</th>
+              <td>9</td>
+              <td colspan="2">10</td>
+              <td rowspan="2">11</td>
+              <td rowspan="4">12</td>
+            </tr>
+            <tr>
+              <th>IV</th>
+              <td rowspan="3">13</td>
+              <td>14</td>
+              <td colspan="2">15</td>
+            </tr>
+            <tr>
+              <th>V</th>
+              <td rowspan="3">16</td>
+              <td>17</td>
+              <td>18</td>
+              <td rowspan="2">19</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <th>VI</th>
+              <td colspan="2">21</td>
+              <td colspan="2" rowspan="2">22</td>
+            </tr>
+            <tr>
+              <th>VII</th>
+              <td>23</td>
+              <td>24</td>
+              <td colspan="2">25</td>
+              <td>26</td>
+            </tr>
+        </table>
+    </body>
+</html>

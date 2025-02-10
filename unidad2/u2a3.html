@@ -1,0 +1,485 @@
+<!--
+    Unidad: Parcial No. 2
+    Descripcion: Formularios
+    Fecha: 06 de Marzo de 2024
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UPSLP - Programaci&oacute;n Web I</title>
+    </head>
+    <body>
+        <h1>Formularios</h1>
+        <h3>Self Service</h3>
+        <form class="form-horizontal">
+          <fieldset>
+          <!-- Form Name -->
+          <legend>Self Service</legend>
+          <!-- Text input (Usuario) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="txtUsuario">Usuario:</label>  
+            <div class="col-md-6">
+            <input id="txtUsuario" name="txtUsuario" type="text" placeholder="Escribe tu matrícula" class="form-control input-md">
+            </div>
+          </div>
+          <!-- Password input (Contraseña) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="txtPasswd">Contraseña:</label>
+            <div class="col-md-6">
+              <input id="txtPasswd" name="txtPasswd" type="password" placeholder="--- Contraseña ---" class="form-control input-md">
+            </div>
+          </div>
+          <br>
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="btnAcceso"></label>
+            <div class="col-md-4">
+              <button id="btnAcceso" name="btnAcceso" class="btn btn-default">Acceso</button>
+            </div>
+          </div>
+          <br>
+          <a href="#">Olvidaste tu contraseña?</a>
+          </fieldset>
+          <fieldset>
+            <legend>Redes sociales</legend>
+            <a href="www.facebook.com"><img height="20px" src="imagenes/fb.png"></a>
+            <a href="www.twiiter.com"><img height="22px" src="imagenes/tw.png"></a>
+            <a href="www.instagram.com"><img height="20px" src="imagenes/ig.png"></a>
+          </fieldset>
+        </form>
+        <h3>Curso de Verano</h3>
+        <form class="form-horizontal">
+          <fieldset>
+          <!-- Form Name -->
+          <legend>Información de contacto para curso de Verano</legend>
+          <!-- Appended Input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="appendedtext">Correo:</label>
+            <div class="col-md-8">
+              <div class="input-group">
+                <input id="appendedtext" name="appendedtext" class="form-control" placeholder="Escribe tu correo electrónico" type="text">
+                <span class="input-group-addon">@upslp.edu.mx</span>
+              </div>
+            </div>
+          </div>
+          <!-- Prepended text-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="prependedtext">Institución:</label>
+            <div class="col-md-8">
+              <div class="input-group">
+                <span class="input-group-addon">UPSLP</span>
+                <input id="prependedtext" name="prependedtext" class="form-control" placeholder="Escribe tu carrera" type="text">
+              </div>
+            </div>
+          </div>
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="radios">Contacto via WhatsApp:</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="radios-0">
+                <input type="radio" name="radios" id="radios-0" value="0" checked="checked">
+                No
+              </label>
+            </div>
+            <div class="radio">
+              <label for="radios-1">
+                <input type="radio" name="radios" id="radios-1" value="1">
+                Si
+              </label>
+            </div>
+            </div>
+          </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Número celular:</label>  
+            <div class="col-md-8">
+            <input id="textinput" name="textinput" type="text" placeholder="(444) 123 - 4567" class="form-control input-md">
+            </div>
+          </div>
+          <!-- Multiple Checkboxes -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="checkboxes">Asignaturas disponibles:</label>
+            <div class="col-md-4">
+            <div class="checkbox">
+              <label for="checkboxes-0">
+                <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                Química
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="checkboxes-1">
+                <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                Física
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="checkboxes-2">
+                <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+                Matemáticas
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="checkboxes-3">
+                <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+                Inglés
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="checkboxes-4">
+                <input type="checkbox" name="checkboxes" id="checkboxes-4" value="5">
+                Programación
+              </label>
+            </div>
+            <div class="checkbox">
+              <label for="checkboxes-5">
+                <input type="checkbox" name="checkboxes" id="checkboxes-5" value="6">
+                Núcleo
+              </label>
+            </div>
+            </div>
+          </div>
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textarea">Información adicional:</label>
+            <div class="col-md-4">                     
+              <textarea class="form-control" id="textarea" name="textarea"></textarea>
+            </div>
+          </div>
+          <!-- Button (Double) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="button1id"></label>
+            <div class="col-md-8">
+              <button id="button1id" name="button1id" class="btn btn-default">Enviar</button>
+              <button id="button2id" name="button2id" class="btn btn-default">Borrar</button>
+            </div>
+          </div>
+          </fieldset>
+        </form>
+        <h3>Comida rápida</h3>
+        <form class="form-horizontal">
+          <fieldset>
+          <!-- Form Name -->
+          <legend>Subway</legend>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Cliente:</label>  
+            <div class="col-md-6">
+            <input id="textinput" name="textinput" type="text" placeholder="Nombre" class="form-control input-md">
+            </div>
+          </div>
+          <!-- Prepended text-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="prependedtext">Teléfono:</label>
+            <div class="col-md-6">
+              <div class="input-group">
+                <span class="input-group-addon">+52</span>
+                <input id="prependedtext" name="prependedtext" class="form-control" placeholder="(444) 123-4567" type="text">
+              </div>
+            </div>
+          </div>
+          <!-- Select Basic -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="selectbasic">Variedad:</label>
+            <div class="col-md-6">
+              <select id="selectbasic" name="selectbasic" class="form-control">
+                <option value="1">Pollo</option>
+                <option value="2">Res</option>
+                <option value="3">Albóndigas</option>
+                <option value="4">Jamón</option>
+                <option value="5">Pavo</option>
+                <option value="6">Italiano</option>
+                <option value="7">Costillas</option>
+              </select>
+            </div>
+          </div>
+          <!-- Select Basic -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="selectbasic">Pan:</label>
+            <div class="col-md-6">
+              <select id="selectbasic" name="selectbasic" class="form-control">
+                <option value="1">Blanco</option>
+                <option value="2">Integral</option>
+                <option value="3">Avena</option>
+                <option value="4">Ajo</option>
+              </select>
+            </div>
+          </div>
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="radios">Tamaño:</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="radios-0">
+                <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                15 cms.
+              </label> 
+              <label class="radio-inline" for="radios-1">
+                <input type="radio" name="radios" id="radios-1" value="2">
+                30 cms.
+              </label>
+            </div>
+          </div>
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="radios">Término:</label>
+            <div class="col-md-4"> 
+              <label class="radio-inline" for="radios-0">
+                <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                Caliente
+              </label> 
+              <label class="radio-inline" for="radios-1">
+                <input type="radio" name="radios" id="radios-1" value="2">
+                Tostado
+              </label>
+            </div>
+          </div>
+          <!-- Select Multiple -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="selectmultiple">Extras:</label>
+            <div class="col-md-6">
+              <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
+                <option value="1">Lechuga</option>
+                <option value="2">Tomate</option>
+                <option value="3">Cebolla</option>
+                <option value="4">Jalapeño</option>
+                <option value="5">Pimiento</option>
+                <option value="6">Aceituna</option>
+                <option value="7">Pepinillos</option>
+              </select>
+            </div>
+          </div>
+          <!-- Select Multiple -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="selectmultiple">Condimentos:</label>
+            <div class="col-md-6">
+              <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
+                <option value="1">Sal</option>
+                <option value="2">Pimienta</option>
+                <option value="3">BBQ</option>
+                <option value="4">Mayonesa</option>
+                <option value="5">Mostaza</option>
+                <option value="6">Habanero</option>
+                <option value="7">Parmesano</option>
+              </select>
+            </div>
+          </div>
+          <!-- Select Basic -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="selectbasic">Pago:</label>
+            <div class="col-md-6">
+              <select id="selectbasic" name="selectbasic" class="form-control">
+                <option value="1">Efectivo</option>
+                <option value="2">Crédito</option>
+                <option value="3">Débito</option>
+                <option value="4">Cupón</option>
+              </select>
+            </div>
+          </div>
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="singlebutton"></label>
+            <div class="col-md-4">
+              <button id="singlebutton" name="singlebutton" class="btn btn-default">Ordenar</button>
+            </div>
+          </div>
+          </fieldset>
+        </form>
+        <h3>Comida rápida (Tabla con Formulario)</h3>
+        <form>
+          <table border="3">
+            <tr><th colspan="6">Subway</th></tr>
+            <tr>
+              <th><label class="col-md-4 control-label" for="textinput">Cliente:</label></th>
+              <td><input id="textinput" name="textinput" type="text" placeholder="Nombre" class="form-control input-md"></td>
+              <th><label class="col-md-4 control-label" for="textinput">Tel&eacute;fono:</label></th>
+              <td><span class="input-group-addon">+52</span><input id="prependedtext" name="prependedtext" class="form-control" placeholder="(444) 123-4567" type="text"></td>
+              <th>Extras</th>
+              <th>Condimentos</th>
+            </tr>
+            <tr>
+              <th><label class="col-md-4 control-label" for="selectbasic">Variedad:</label></th>
+              <td>
+                <select id="selectbasic" name="selectbasic" class="form-control">
+                  <option value="0">Elige variedad:</option>
+                  <option value="1">Pollo</option>
+                  <option value="2">Res</option>
+                  <option value="3">Albóndigas</option>
+                  <option value="4">Jamón</option>
+                  <option value="5">Pavo</option>
+                  <option value="6">Italiano</option>
+                  <option value="7">Costillas</option>
+                </select>
+              </td>
+              <th><label class="col-md-4 control-label" for="selectbasic">Pan:</label></th>
+              <td>
+                <select id="selectbasic" name="selectbasic" class="form-control">
+                  <option value="0">Tipo pan:</option>
+                  <option value="1">Blanco</option>
+                  <option value="2">Integral</option>
+                  <option value="3">Avena</option>
+                  <option value="4">Ajo</option>
+                </select>
+              </td>
+              <td rowspan="3">
+                <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
+                  <option value="1">Lechuga</option>
+                  <option value="2">Tomate</option>
+                  <option value="3">Cebolla</option>
+                  <option value="4">Jalapeño</option>
+                  <option value="5">Pimiento</option>
+                  <option value="6">Aceituna</option>
+                  <option value="7">Pepinillos</option>
+                </select>
+              </td>
+              <td rowspan="3">
+                <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
+                  <option value="1">Sal</option>
+                  <option value="2">Pimienta</option>
+                  <option value="3">BBQ</option>
+                  <option value="4">Mayonesa</option>
+                  <option value="5">Mostaza</option>
+                  <option value="6">Habanero</option>
+                  <option value="7">Parmesano</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="2"><label class="col-md-4 control-label" for="radios">Tamaño:</label></th>
+              <td>
+                <label class="radio-inline" for="radios-0">
+                  <input type="radio" name="radio" id="radio-0" value="1" checked="checked">
+                  15 cms.
+                </label>
+              </td>
+              <th rowspan="2"><label class="col-md-4 control-label" for="radios">Término:</label></th>
+              <td>
+                <label class="radio-inline" for="radios-0">
+                  <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                  Caliente
+                </label> 
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="radio-inline" for="radios-1">
+                  <input type="radio" name="radio" id="radio-1" value="2">
+                  30 cms.
+                </label>
+              </td>
+              <td>
+                <label class="radio-inline" for="radios-1">
+                  <input type="radio" name="radios" id="radios-1" value="2">
+                  Tostado
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <th>Pago</th>
+              <td>
+                <select id="selectbasic" name="selectbasic" class="form-control">
+                  <option value="0">Tipo de pago</option>
+                  <option value="1">Efectivo</option>
+                  <option value="2">Crédito</option>
+                  <option value="3">Débito</option>
+                  <option value="4">Cupón</option>
+                </select>
+              </td>
+              <td colspan="4"><button id="singlebutton" name="singlebutton" class="btn btn-default">Ordenar</button></td>
+            </tr>
+          </table>
+        </form>
+        <h3>Centro de impresiones</h3>
+        <form>
+          <fieldset>
+            <legend>Office Depot</legend>
+            <label>Seleccione el archivo:</label>
+            <input type="file">
+            <br>
+            <label>Selecciona el color de tinta:</label>
+            <input type="color">
+            <br>
+            <label>Cuántas impresiones necesitas?:</label>
+            <input type="number">
+            <br>
+            <label>Costo por hoja impresa:</label>
+            <input type="text" value="$2.00" readonly>
+            <br>
+            <label>Entrega programada:</label><br>
+            <label>Fecha:</label><input type="date">
+            <br>
+            <label>Hora:</label><input type="time">
+            <br>
+            <input type="submit"><input type="reset">
+          </fieldset>
+        </form>
+        <h3>Sistema de Calificaciones</h3>
+        <h5>Historial acad&eacute;mico</h5>
+        <form>
+          <fieldset>
+            <legend>0177111 - Rub&eacute;n C&aacute;rdenas S&aacute;nchez</legend>
+            <label>N&uacute;mero de identificaci&oacute;n:</label>
+            <input type="hidden" value="0177111" disabled>
+            <!-- Lista de semestres -->
+            <ol>
+              <li>
+                Semestre I<br>
+                <!-- Lista de materias del semestres -->
+                <ol type="I">
+                  <li>Introducci&oacute;n a las Matem&aacute;ticas
+                    <input type="range" min="0" max="10" value="9"></li>
+                  <li>Introducci&oacute;n a las F&iacute;sica
+                    <input type="range" min="0" max="10" value="7"></li>
+                  <li>Introducci&oacute;n a la Computaci&oacute;n
+                    <input type="range" min="0" max="10" value="10"></li>
+                  <li>Taller de Certificaci&oacute;n de Office
+                    <input type="range" min="0" max="10" value="10"></li>
+                  <li>Curso de N&uacute;cleo General I
+                    <input type="range" min="0" max="10" value="7"></li>
+                  <li>Ingl&eacute;s I
+                    <input type="range" min="0" max="10" value="9"></li>
+                  <li>Promedio: <input type="number" value="7"></li>
+                </ol>
+              </li>
+              <li>
+                Semestre II
+                <!-- Lista de materias del semestres -->
+                <ol type="I">
+                  <li>Matem&aacute;ticas I
+                    <meter min="0" max="100" value="75"></meter></li>
+                  <li>F&iacute;sica I
+                    <meter min="0" max="100" value="85"></meter></li>
+                  <li>Programaci&oacute;n I
+                    <meter min="0" max="100" value="70"></meter></li>
+                  <li>Curso de N&uacute;cleo Optativo I
+                    <meter min="0" max="100" value="90"></meter></li>
+                  <li>Curso de N&uacute;cleo General II
+                    <meter min="0" max="100" value="95"></meter></li>
+                  <li>Ingl&eacute;s II
+                    <meter min="0" max="100" value="100"></meter></li>
+                  <li>Promedio: <label>7.00</label></li>
+                </ol>
+              </li>
+              <li>
+                Semestre III
+                <!-- Lista de materias del semestres -->
+                <ol type="I">
+                  <li>Matem&aacute;ticas II
+                    <progress min="0" max="100" value="75"></progress></li>
+                  <li>F&iacute;sica II
+                    <progress min="0" max="100" value="85"></progress></li>
+                  <li>Programaci&oacute;n II
+                    <progress min="0" max="100" value="70"></progress></li>
+                  <li>Curso de N&uacute;cleo Optativo II
+                    <progress min="0" max="100" value="90"></progress></li>
+                  <li>Curso de N&uacute;cleo General III
+                    <progress min="0" max="100" value="95"></progress></li>
+                  <li>Ingl&eacute;s III
+                    <progress min="0" max="100" value="100"></progress></li>
+                  <li>Promedio: <label>7.00</label></li>
+                </ol>
+              </li>
+            </ol>
+          </fieldset>
+        </form>
+    </body>
+</html>
