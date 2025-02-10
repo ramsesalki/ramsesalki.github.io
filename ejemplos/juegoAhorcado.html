@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UPSLP - Programación Web I</title>
+        <link rel="stylesheet" href="Estilo/estilo.css">
+    </head>
+    <body>
+        <h1>~~~ Juego del Ahorcado ~~~</h1>
+        <fieldset>
+            <legend>Qui&eacute;n es ese Pok&eacute;mon?</legend>
+            <table>
+                <tr>
+                    <td><button id="casilla_1" class="input">&nbsp;</button></td>
+                    <td><button id="casilla_2" class="input">&nbsp;</button></td>
+                    <td><button id="casilla_3" class="input">&nbsp;</button></td>
+                    <td><button id="casilla_4" class="input">&nbsp;</button></td>
+                    <td><button id="casilla_5" class="input">&nbsp;</button></td>
+                    <td><button id="casilla_6" class="input">&nbsp;</button></td>
+                    <td><button id="casilla_7" class="input">&nbsp;</button></td>
+                    <td><button id="casilla_8" class="input">&nbsp;</button></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Teclado</legend>
+            <table>
+                <tr>
+                    <td><button onclick="validar('Q')" class="button">Q</button></td>
+                    <td><button onclick="validar('W')" class="button">W</button></td>
+                    <td><button onclick="validar('E')" class="button">E</button></td>
+                    <td><button onclick="validar('R')" class="button">R</button></td>
+                    <td><button onclick="validar('T')" class="button">T</button></td>
+                    <td><button onclick="validar('Y')" class="button">Y</button></td>
+                    <td><button onclick="validar('U')" class="button">U</button></td>
+                    <td><button onclick="validar('I')" class="button">I</button></td>
+                    <td><button onclick="validar('O')" class="button">O</button></td>
+                    <td><button onclick="validar('P')" class="button">P</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="validar('A')" class="button">A</button></td>
+                    <td><button onclick="validar('S')" class="button">S</button></td>
+                    <td><button onclick="validar('D')" class="button">D</button></td>
+                    <td><button onclick="validar('F')" class="button">F</button></td>
+                    <td><button onclick="validar('G')" class="button">G</button></td>
+                    <td><button onclick="validar('H')" class="button">H</button></td>
+                    <td><button onclick="validar('J')" class="button">J</button></td>
+                    <td><button onclick="validar('K')" class="button">K</button></td>
+                    <td><button onclick="validar('L')" class="button">L</button></td>
+                    <td><button onclick="validar('Ñ')" class="button">Ñ</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button">&nbsp;</button></td>
+                    <td><button onclick="validar('Z')" class="button">Z</button></td>
+                    <td><button onclick="validar('X')" class="button">X</button></td>
+                    <td><button onclick="validar('C')" class="button">C</button></td>
+                    <td><button onclick="validar('V')" class="button">V</button></td>
+                    <td><button onclick="validar('B')" class="button">B</button></td>
+                    <td><button onclick="validar('N')" class="button">N</button></td>
+                    <td><button onclick="validar('M')" class="button">M</button></td>
+                    <td><button class="button">.</button></td>
+                    <td><button class="button">&nbsp;</button></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Intentos</legend>
+            <table>
+                <tr>
+                    <td><button id="vida_1" class="score">&nbsp;</button></td>
+                    <td><button id="vida_2" class="score">&nbsp;</button></td>
+                    <td><button id="vida_3" class="score">&nbsp;</button></td>
+                    <td><button id="vida_4" class="score">&nbsp;</button></td>
+                    <td><button id="vida_5" class="score">&nbsp;</button></td>
+                </tr>
+            </table>
+        </fieldset>
+        <script>
+            function getRandom(max) {
+                return Math.floor(Math.random() * max);
+            }
+            // Arreglo de cadenas
+            const team = ["ALAKAZAM", "ARCANINE", "BLAZIKEN", "COBALION", "DUSKNOIR", "EMPOLEON", "FOMANTIS", "GARCHOMP", "GIGALITH", "GIRATINA", "GYARADOS", "MELMETAL", "MELOETTA", "NIDOKING", "RAYQUAZA"];
+            let item = getRandom(team.length);
+            let pokemon = team[item];
+            let palabra = [];
+            let vidas = 0;
+            function validar(car) {
+                if (pokemon.includes(car))
+                    muestra(car);
+                else
+                    error();
+            }
+            function muestra(car) {
+                if (pokemon[0] == car) { document.getElementById('casilla_1').innerHTML = car; palabra[0] = car; }
+                if (pokemon[1] == car) { document.getElementById('casilla_2').innerHTML = car; palabra[1] = car; }
+                if (pokemon[2] == car) { document.getElementById('casilla_3').innerHTML = car; palabra[2] = car; }
+                if (pokemon[3] == car) { document.getElementById('casilla_4').innerHTML = car; palabra[3] = car; }
+                if (pokemon[4] == car) { document.getElementById('casilla_5').innerHTML = car; palabra[4] = car; }
+                if (pokemon[5] == car) { document.getElementById('casilla_6').innerHTML = car; palabra[5] = car; }
+                if (pokemon[6] == car) { document.getElementById('casilla_7').innerHTML = car; palabra[6] = car; }
+                if (pokemon[7] == car) { document.getElementById('casilla_8').innerHTML = car; palabra[7] = car; }
+                if (pokemon == palabra.join("").trim())
+                    if (confirm('Ganaste!!!\n Deseas reiniciar?'))
+                        reset();
+                    else
+                        location.href = 'https://www.google.com.mx/';
+            }
+            function error() {
+                vidas++;
+                if (vidas >= 1)
+                    document.getElementById('vida_1').innerHTML = 'X';
+                if (vidas >= 2)
+                    document.getElementById('vida_2').innerHTML = 'X';
+                if (vidas >= 3)
+                    document.getElementById('vida_3').innerHTML = 'X';
+                if (vidas >= 4)
+                    document.getElementById('vida_4').innerHTML = 'X';
+                if (vidas >= 5) {
+                    document.getElementById('vida_5').innerHTML = 'X';
+                    if (confirm('La palabra era: ' + pokemon + '\n Deseas reiniciar?'))
+                        reset();
+                    else
+                        location.href = 'https://www.google.com.mx/';
+                }
+            }
+            function reset() {
+                item = getRandom(team.length);
+                pokemon = team[item];
+                vidas = 0;
+                /* Limpiar palabra */
+                document.getElementById('casilla_1').innerHTML = "&nbsp;";
+                document.getElementById('casilla_2').innerHTML = "&nbsp;";
+                document.getElementById('casilla_3').innerHTML = "&nbsp;";
+                document.getElementById('casilla_4').innerHTML = "&nbsp;";
+                document.getElementById('casilla_5').innerHTML = "&nbsp;";
+                document.getElementById('casilla_6').innerHTML = "&nbsp;";
+                document.getElementById('casilla_7').innerHTML = "&nbsp;";
+                document.getElementById('casilla_8').innerHTML = "&nbsp;";
+                /* Limpiar vidas */
+                document.getElementById('vida_1').innerHTML = "&nbsp;";
+                document.getElementById('vida_2').innerHTML = "&nbsp;";
+                document.getElementById('vida_3').innerHTML = "&nbsp;";
+                document.getElementById('vida_4').innerHTML = "&nbsp;";
+                document.getElementById('vida_5').innerHTML = "&nbsp;";
+            }
+        </script>
+    </body>
+</html>
