@@ -1,5 +1,5 @@
 <h1 align="left">Hey 👋 What's up?</h1>
-<p align="left">My name is Rubén Cárdenas Sánchez and I'm a University Teacher, from Universidad Politécnica de San Luis Potosí</p>
+<p align="left">My name is Ramses Alki and I'm a Master in Information Technology...</p>
 
 <h2 align="left">About me</h2>
 <p align="left">📚 I'm currently learning ReactNative<br>🎯 Goals: Gotta Catch 'Em All!<br>🎲 Fun fact: Mountain bike enjoyer<br>✨ Current level: Level 40</p>
